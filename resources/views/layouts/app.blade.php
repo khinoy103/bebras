@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -62,7 +62,7 @@
                         <a href="index.html">BEBRAS UBG</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
-                        <a href="index.html">SMK</a>
+                        <a href="index.html">BU</a>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">MAIN MENU</li>
@@ -96,7 +96,7 @@
                                 href="#"><i class="fas fa-image"></i>
                                 <span>Foto</span></a></li>
                         @endcan
-
+                          
                         @can('videos.index')
                         <li class="{{ setActive('admin/video') }}"><a class="nav-link"
                                 href="#"><i class="fas fa-video"></i>
