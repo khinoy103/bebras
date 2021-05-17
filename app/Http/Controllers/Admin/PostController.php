@@ -29,9 +29,9 @@ class PostController extends Controller
 
         $data['image'] =  $namePhoto;
         $data['title'] = $request->title;
-        $data['slug'] = Str::slug($request->title, '-');
         $data['content'] = $request->content;
         $data['category_id'] = $request->category_id;
+        $data['slug'] = $request->slug;
         $post = Post::create($data);
         return redirect(route('admin.post.index'))->with('success','Data berhasil ditambahkan');
     }
