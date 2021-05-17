@@ -6,7 +6,7 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Str;
 class PostController extends Controller
 {
     public function index()
@@ -29,9 +29,9 @@ class PostController extends Controller
 
         $data['image'] =  $namePhoto;
         $data['title'] = $request->title;
+        $data['slug'] = Str::slug($request->title, '-');
         $data['content'] = $request->content;
         $data['category_id'] = $request->category_id;
-        $data['slug'] = $request->slug;
         $post = Post::create($data);
         return redirect(route('admin.post.index'))->with('success','Data berhasil ditambahkan');
     }
@@ -67,9 +67,9 @@ class PostController extends Controller
         $post->update($data);
         return redirect(route('admin.post.index'))->with('success','Data berhasil diubah');
     }
-    public function delete(Request $request)
+    public function delete(Request $request, $id)
     {
-        $post = Post::find($request->id)->delete();
+        $post = Post::find($id)->delete();
         return redirect()->back()->with('success','Data berhasil dihapus');
     }
 

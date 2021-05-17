@@ -13,7 +13,7 @@
 
 
     <div class="section-body">
-        <div class="card">
+        <div class="card">oy
             <div class="card-header">
                 <h4>Detail Berita</h4>
                 <div class="card-header-action">

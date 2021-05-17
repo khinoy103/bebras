@@ -28,16 +28,12 @@
                     <input type="text" id="title" name="title" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="slug">Slug</label>
-                    <input type="text" id="slug" name="slug" class="form-control">
-                </div>
-                <div class="form-group">
                     <label for="content">Konten</label>
                     <textarea id="content" name="content"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="image">Gambar</label>
-                    <input type="file" id="image" name="photo" class="form-control">
+                    <input type="file" id="image" name="photo" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="category_id">Kategori</label>
