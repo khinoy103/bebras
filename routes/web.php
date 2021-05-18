@@ -23,6 +23,7 @@ Auth::routes(['register' => false]);
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('home', 'HomeController@index');
     Route::prefix('admin')->name('admin.')->group(function () {    
         Route::group(['middleware' => 'admin'], function () {
             Route::get('/dashboard', 'Admin\DashboardController@index')->name('dashboard.index');
